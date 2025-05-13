@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.slider {
+  grid-area: slider;
+  border: 2px solid #e3b873;
+  border-radius: 8px;
+  height: fit-content; }
+
+.slider__picture {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.slider__buttons {
+  display: flex;
+  gap: 8px; }
+
+.balls {
+  display: flex;
+  gap: 16px;
+  align-items: center; }
+
+.insideSlider {
+  color: #FFFFFF;
+  height: 20px;
+  width: fit-content;
+  font-family: Nunito, sans-serif;
+  font-size: 13px; }
+
+/*шарики и верхние ссылки выбранные и не очень*/
+.ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 16px;
+  cursor: pointer; }
+
+.main__ball__notSelected {
+  background-color: rgba(255, 255, 255, 0.3); }
+
+.main__ball__selected {
+  background-color: #FFFFFF; }
+
+/*# sourceMappingURL=slider.css.map */

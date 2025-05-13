@@ -1,0 +1,18 @@
+@import "general";
+
+.navbar > ul {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar > ul > li {
+  font-family: Montserrat-bold, sans-serif;
+  font-size: 10px;
+  list-style: none;
+  color: $not__active__text;
+  align-items: center;
+}
+
+.active {
+  color: $active__text;
+}

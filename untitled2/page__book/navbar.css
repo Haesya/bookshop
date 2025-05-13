@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  display: grid;
+  grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);
+  grid-auto-rows: auto auto auto;
+  grid-template-areas: ". header ." ". slider ." ". books ."; }
+
+.navbar > ul {
+  display: flex;
+  gap: 40px; }
+
+.navbar > ul > li {
+  font-family: Montserrat-bold, sans-serif;
+  font-size: 10px;
+  list-style: none;
+  color: #5c6a79;
+  align-items: center; }
+
+.active {
+  color: #1c2a39; }
+
+/*# sourceMappingURL=navbar.css.map */
