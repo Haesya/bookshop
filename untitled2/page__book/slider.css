@@ -1,7 +1,6 @@
 @charset "UTF-8";
 .slider {
   grid-area: slider;
-  border: 2px solid #e3b873;
   border-radius: 8px;
   height: fit-content; }
 
@@ -12,11 +11,13 @@
 
 .slider__buttons {
   display: flex;
-  gap: 8px; }
+  padding-top: 17px;
+  gap: 8px;
+  justify-content: center; }
 
 .balls {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   align-items: center; }
 
 .insideSlider {
@@ -34,9 +35,9 @@
   cursor: pointer; }
 
 .main__ball__notSelected {
-  background-color: rgba(255, 255, 255, 0.3); }
+  background-color: #EFEEF6; }
 
 .main__ball__selected {
-  background-color: #FFFFFF; }
+  background-color: #9e98dc; }
 
 /*# sourceMappingURL=slider.css.map */

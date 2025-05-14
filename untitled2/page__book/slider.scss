@@ -1,14 +1,9 @@
 
 .slider {
   grid-area: slider;
-  border: 2px solid #e3b873;
   border-radius: 8px;
   height: fit-content;
 }
-
-.slider__pictures {
-}
-
 .slider__picture {
   width: 100%;
   padding: 0;
@@ -17,12 +12,14 @@
 
 .slider__buttons {
   display: flex;
+  padding-top: 17px;
   gap: 8px;
+  justify-content: center;
 }
 
 .balls{
   display: flex;
-  gap: 16px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -43,9 +40,9 @@
 }
 
 .main__ball__notSelected {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #EFEEF6;
 }
 
 .main__ball__selected {
-  background-color: #FFFFFF;
+  background-color: #9e98dc;
 }

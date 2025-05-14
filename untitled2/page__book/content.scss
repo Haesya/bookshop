@@ -1,0 +1,86 @@
+.content {
+  grid-area: books;
+  display: grid;
+  padding-top: 105px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: "a a a b b b b b b b b b"
+;
+}
+
+.categories{
+  grid-area: a;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.category {
+  font-size: 12px;
+  color: #5c6a79;
+  list-style: none;
+}
+
+.category__select {
+  font-family: Montserrat-bold, sans-serif;
+  font-size: 16px;
+  color: #1c2a39;
+}
+
+.books {
+  grid-area: b;
+  width: 100%;
+}
+
+.book {
+  display: flex;
+}
+
+.book__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.book__author {
+  font-size: 10px;
+  color: #5c6a79;
+}
+
+.book__name {
+  font-size: 16px;
+  color: #1c2a39;
+}
+
+.book__rating {
+  display: flex;
+  gap: 6px;
+}
+
+.book__rating__stars {
+
+}
+
+.book__rating__reviews {
+  font-size: 10px;
+  color: #5c6a79;
+}
+
+.book__description {
+  font-size: 10px;
+  color: #5c6a79;
+}
+
+.book__price {
+  font-size: 16px;
+  color: #1c2a39;
+}
+
+.buy__book {
+  border: 1px solid #4c3db2;
+  color: #4c3db2;
+  padding: 17px 60px;
+  font-size: 10px;
+  background-color: transparent;
+  width: fit-content;
+}

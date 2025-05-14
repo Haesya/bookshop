@@ -1,12 +1,12 @@
 const images = [
     {
-        img: '../banner1.png',
+        img: '../public/banner1.png',
     },
     {
-        img: '../banner2.png',
+        img: '../public/banner2.png',
     },
     {
-        img: '../banner3.png',
+        img: '../public/banner3.png',
     }
 ]
 
@@ -16,7 +16,6 @@ const balls = document.querySelector('.balls')
 /*по циклу создаем количество шариков*/
 for (let i= 0; i < images.length; i++){
     const ball = document.createElement('div')
-    console.log(ball)
     ball.classList.add('ball')
     balls.appendChild(ball)
     /*и всем шарикам кроме первого задаем свойство невыбранности*/
@@ -41,38 +40,22 @@ insideSlider.append(image)
 
 let currentData = 0; //какие данные сейчас выводим на экран
 
-/*смена данных в информационном поле и картинка*/
-function changeData (current){
+/*смена картинки*/
+function changeDataAndBalls (current){
     /*меняем картинку*/
-    insideSlider.style.backgroundImage = `url(${images[current].img})`
-}
-
-/*смена шариков*/
-function changeBalls (currentActive) {
-    /*все инактивим*/
+    image.src = images[current].img
     for(let i = 0; i < balls.children.length; i++) {
         balls.children[i].classList.replace("main__ball__selected", "main__ball__notSelected")
     }
     /*кроме одного выбранного*/
-    balls.children[currentActive].classList.replace("main__ball__notSelected", "main__ball__selected")
+    balls.children[current].classList.replace("main__ball__notSelected", "main__ball__selected")
 }
 
 /*КЛИКНУЛИ НА КОНКРЕТНЫЙ ШАРИК*/
-const ballsForClick = document.querySelectorAll('.main__ball')
+const ballsForClick = document.querySelectorAll('.ball')
 ballsForClick.forEach((ball, index) => {
     ball.addEventListener('click', () => {
-        changeBalls(index)
-        changeData(index)
-        currentData = index
-    })
-})
-
-/*КЛИКНУЛИ НА КОНКРЕТНУЮ ССЫЛКУ*/
-const linksForClick = document.querySelectorAll('.main__link')
-linksForClick.forEach((link, index) => {
-    link.addEventListener('click', () => {
-        changeBalls(index)
-        changeData(index)
+        changeDataAndBalls(index)
         currentData = index
     })
 })
