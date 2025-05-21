@@ -5,13 +5,14 @@ export function renderCategoriesForm (){
     const booksCategories = document.createElement('div')
     booksCategories.classList.add('categories')
 
-    for (let i = 0; i < categories.length; i++) {
+    for (let i = 0; i < Object.keys(categories).length; i++) {
         const category = document.createElement('div')
         category.classList.add('category')
         category.addEventListener('click', ()=>{
-            renderBooksFromCategory(categories[i])
+            renderBooksFromCategory(Object.values(categories)[i])
         })
-        category.innerText = categories[i]
+        console.log(Object.keys(categories)[i])
+        category.innerText = `${Object.keys(categories)[i]}`
         booksCategories.appendChild(category)
     }
 
