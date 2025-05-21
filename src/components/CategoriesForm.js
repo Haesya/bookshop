@@ -1,7 +1,7 @@
 import {categories} from "../data/categories.js";
 import {renderBooksFromCategory} from "./BooksFromCategory.js";
 
-export function renderCategoriesForm (url){
+export function renderCategoriesForm(url) {
     const booksCategories = document.createElement('div')
     booksCategories.classList.add('categories')
 
@@ -11,13 +11,17 @@ export function renderCategoriesForm (url){
         if (i == 0) {
             category.classList.add('category__select')
         }
-        category.addEventListener('click', ()=>{
+        category.addEventListener('click', () => {
             const content = document.querySelector('.content')
-            if(content) {
+            if (content) {
                 const iWannaDelete = content.querySelector('.books')
                 content.removeChild(iWannaDelete)
             }
             content.appendChild(renderBooksFromCategory(Object.values(categories)[i]))
+            for (let key of booksCategories.children) {
+                key.classList.remove('category__select')
+            }
+            category.classList.add('category__select')
         })
         category.innerText = `${Object.keys(categories)[i]}`
         booksCategories.appendChild(category)

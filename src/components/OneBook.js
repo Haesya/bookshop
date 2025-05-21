@@ -16,7 +16,7 @@ export function renderOneBook(data, i) {
     }
     cover.alt = 'banner'
     bookCover.appendChild(cover)
-    
+
     /*информационный раздел у книги*/
     const bookInfo = document.createElement('div')
     bookInfo.classList.add('book__info')
