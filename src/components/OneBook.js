@@ -1,7 +1,6 @@
 import {buyBookClick} from "./BuyBook.js";
 
 export function renderOneBook(data, i) {
-    console.log(data)
     /*создали одну книгу*/
     const book = document.createElement('div')
     book.classList.add('book')
@@ -17,6 +16,7 @@ export function renderOneBook(data, i) {
     }
     cover.alt = 'banner'
     bookCover.appendChild(cover)
+    
     /*информационный раздел у книги*/
     const bookInfo = document.createElement('div')
     bookInfo.classList.add('book__info')
