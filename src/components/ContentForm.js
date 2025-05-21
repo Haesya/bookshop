@@ -12,7 +12,7 @@ export function renderContentForm() {
     /*впихиваем раздел с категориями*/
     content.appendChild(renderCategoriesForm())
 
-    /*впихиваем в контент книги из первой категории*/
+    /*впихиваем в контент книги из категории */
     content.appendChild(renderBooksFromCategory(url))
 
     content.appendChild(renderLoadMoreForm(url))

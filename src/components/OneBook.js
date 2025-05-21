@@ -50,11 +50,13 @@ export function renderOneBook(data, i) {
     }
 
     /*описание книги*/
-    const bookDescription = document.createElement('div')
-    bookDescription.classList.add('book__description')
-    if (data.items[i].volumeInfo.description.length > 100)
-        bookDescription.innerText = data.items[i].volumeInfo.description.slice(0, 99)
-    bookInfo.appendChild(bookDescription)
+    if (data.items[i].volumeInfo.description) {
+        const bookDescription = document.createElement('div')
+        bookDescription.classList.add('book__description')
+        if (data.items[i].volumeInfo.description.length > 100)
+            bookDescription.innerText = data.items[i].volumeInfo.description.slice(0, 99)
+        bookInfo.appendChild(bookDescription)
+    }
 
     /*цена книги*/
     if (data.items[i].saleInfo.isEbook === true) {

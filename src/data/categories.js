@@ -1,6 +1,7 @@
 
 
-export const categories = ['Architecture',
+export const categories = [
+    'Architecture',
     'Art & Fashion',
     'Biography',
     'Business',
