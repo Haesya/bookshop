@@ -15,6 +15,7 @@ export function renderContentForm() {
     /*впихиваем в контент книги из категории */
     content.appendChild(renderBooksFromCategory(url))
 
+    /*и кнопку для загрузки бОльшего количества книг*/
     content.appendChild(renderLoadMoreForm(url))
 
     return content;

@@ -103,16 +103,23 @@
   border: 1px solid #4c3db2;
   white-space: nowrap;
   color: #4c3db2;
-  padding: 15px 55px;
+  text-align: center;
+  height: 45px;
+  width: 175px;
   font-size: 10px;
   background-color: transparent;
-  width: fit-content;
   cursor: pointer;
 }
 
 .buy__book {
  @include button
 }
+
+.inTheBasket {
+  border: 1px solid #eeedf5;
+  color: #5c6a79;
+}
+
 
 .load__more {
   @include button;

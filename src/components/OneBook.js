@@ -70,8 +70,9 @@ export function renderOneBook(data, i) {
     const buyBook = document.createElement('button')
     buyBook.classList.add('buy__book')
     buyBook.innerText = "BUY NOW"
+    let flag = false
     buyBook.addEventListener("click", () => {
-        buyBookClick()
+        flag = buyBookClick(i, flag)
     })
 
     /*и по порядку теперь остатки запихиваем в инфо*/

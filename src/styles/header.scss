@@ -36,3 +36,20 @@ header {
 .active {
   color: $active__text;
 }
+
+
+.inside__basket {
+  position: relative;
+}
+
+.purchases {
+  font-size: 10px;
+  position: absolute;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: red;
+  line-height: 10px;
+  color: white;
+  bottom: 0;
+  right:0;
+}

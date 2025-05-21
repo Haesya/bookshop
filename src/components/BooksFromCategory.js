@@ -4,6 +4,7 @@ export function renderBooksFromCategory(url, CategoryName = 'Art & Fashion') {
     /*меняем ссылку на нужную категорию*/
     url = url.replace("*", `${CategoryName}`)
 
+
     const books = document.createElement('div')
     books.classList.add('books')
 
@@ -25,7 +26,6 @@ export function renderBooksFromCategory(url, CategoryName = 'Art & Fashion') {
 
         return bookList
     };
-
 
     fetchData().then(result => result.forEach((elem) => {books.appendChild(elem)}));
 
