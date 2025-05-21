@@ -1,6 +1,7 @@
 import {buyBookClick} from "./BuyBook.js";
 
 export function renderOneBook(data, i) {
+    console.log(data)
     /*создали одну книгу*/
     const book = document.createElement('div')
     book.classList.add('book')
@@ -9,10 +10,13 @@ export function renderOneBook(data, i) {
     const bookCover = document.createElement('div')
     bookCover.classList.add('book__cover')
     const cover = document.createElement('img')
-    cover.src = data.items[i].volumeInfo.imageLinks.thumbnail
+    if (data.items[i].volumeInfo.imageLinks !== undefined) {
+        cover.src = data.items[i].volumeInfo.imageLinks.thumbnail
+    } else {
+        cover.src = 'banner.jpg'
+    }
     cover.alt = 'banner'
     bookCover.appendChild(cover)
-
     /*информационный раздел у книги*/
     const bookInfo = document.createElement('div')
     bookInfo.classList.add('book__info')
@@ -59,7 +63,7 @@ export function renderOneBook(data, i) {
     }
 
     /*цена книги*/
-    if (data.items[i].saleInfo.isEbook === true) {
+    if (data.items[i].saleInfo.amount !== undefined) {
         const bookPrice = document.createElement('div')
         bookPrice.classList.add('book__price')
         bookPrice.innerText = data.items[i].saleInfo.listPrice.amount
