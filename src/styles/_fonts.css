@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Montserrat-reg";
+  src: local("Montserrat-reg"), url("Montserrat-Regular.ttf") format("woff"); }
+@font-face {
+  font-family: "Montserrat-bold";
+  src: local("Montserrat-bold"), url("Montserrat-Bold.ttf") format("woff"); }
+* {
+  font-family: Montserrat-reg, sans-serif; }
+
+/*# sourceMappingURL=_fonts.css.map */

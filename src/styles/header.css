@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  display: grid;
+  grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);
+  grid-auto-rows: auto auto auto;
+  grid-template-areas: ". header ." ". slider ." ". books ."; }
+
+.title {
+  font-family: Montserrat-bold, sans-serif;
+  font-size: 24px; }
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  align-items: center; }
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; }
+
+.navbar > ul {
+  display: flex;
+  gap: 40px; }
+
+.navbar > ul > li {
+  font-family: Montserrat-bold, sans-serif;
+  font-size: 10px;
+  list-style: none;
+  color: #5c6a79;
+  align-items: center; }
+
+.active {
+  color: #1c2a39; }
+
+/*# sourceMappingURL=header.css.map */

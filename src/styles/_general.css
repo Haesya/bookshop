@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: transparent; }
+
+#app {
+  display: grid;
+  grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);
+  grid-auto-rows: auto auto auto;
+  grid-template-areas: ". header ." ". slider ." ". books ."; }
+
+/*# sourceMappingURL=_general.css.map */

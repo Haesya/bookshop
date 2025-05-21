@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+$active__text: #1c2a39;
+$not__active__text: #5c6a79;
+
+#app {
+  display: grid;
+  grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);
+  grid-auto-rows: auto auto auto;
+  grid-template-areas:
+          ". header ."
+          ". slider ."
+          ". books .";
+}
+

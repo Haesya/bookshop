@@ -1,0 +1,42 @@
+.slider {
+  grid-area: slider;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.slider__picture {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.insideSlider {
+  color: #FFFFFF;
+  height: 20px;
+  width: fit-content;
+  font-family: Nunito, sans-serif;
+  font-size: 13px;
+}
+
+.balls{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 17px;
+  justify-content: center;
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.main__ball__notSelected {
+  background-color: #EFEEF6;
+}
+
+.main__ball__selected {
+  background-color: #9e98dc;
+}
