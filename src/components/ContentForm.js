@@ -3,7 +3,6 @@ import {renderBooksFromCategory} from "./BooksFromCategory.js";
 import {renderLoadMoreForm} from "./LoadMoreForm.js";
 
 export function renderContentForm() {
-    const url = `https://www.googleapis.com/books/v1/volumes?q="subject:*"&key=AIzaSyAlIeGyOujclVGHf35-htRC99WUBGNh7Ak&printType=books&startIndex=0&maxResults=6&langRestrict=en`
 
     /*поле для контента с книгами и категориями*/
     const content = document.createElement('div')
@@ -13,10 +12,10 @@ export function renderContentForm() {
     content.appendChild(renderCategoriesForm())
 
     /*впихиваем в контент книги из категории */
-    content.appendChild(renderBooksFromCategory(url))
+    content.appendChild(renderBooksFromCategory())
 
     /*и кнопку для загрузки бОльшего количества книг*/
-    content.appendChild(renderLoadMoreForm(url))
+    content.appendChild(renderLoadMoreForm())
 
     return content;
 }

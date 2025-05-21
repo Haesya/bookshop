@@ -1,9 +1,8 @@
 import {renderOneBook} from "./OneBook.js";
+import {url1, url2} from "../data/url.js"
 
-export function renderBooksFromCategory(url, CategoryName = 'Art & Fashion') {
-    /*меняем ссылку на нужную категорию*/
-    url = url.replace("*", `${CategoryName}`)
-
+export function renderBooksFromCategory(CategoryName = 'Architecture') {
+    let url = url1 + CategoryName + url2
 
     const books = document.createElement('div')
     books.classList.add('books')
