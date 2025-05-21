@@ -47,7 +47,6 @@
 .book__cover {
   box-shadow: 0 21px 22px -14px rgba(34, 60, 80, 0.6);
   width: 100%;
-  border: 1px solid #EFEEF6;
   overflow: hidden;
 }
 
@@ -120,4 +119,5 @@
   grid-area: lm;
   justify-self: center;
   margin-top: 95px;
+  margin-bottom: 75px;
 }

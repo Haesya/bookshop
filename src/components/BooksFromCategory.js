@@ -1,8 +1,8 @@
 import {renderOneBook} from "./OneBook.js";
 
-export function renderBooksFromCategory(CategoryName = 'Art & Fashion') {
+export function renderBooksFromCategory(url, CategoryName = 'Art & Fashion') {
     /*меняем ссылку на нужную категорию*/
-    const url = `https://www.googleapis.com/books/v1/volumes?q="subject:${CategoryName}"&key=AIzaSyAlIeGyOujclVGHf35-htRC99WUBGNh7Ak&printType=books&startIndex=0&maxResults=6&langRestrict=en`
+    url = url.replace("*", `${CategoryName}`)
 
     const books = document.createElement('div')
     books.classList.add('books')
@@ -25,6 +25,7 @@ export function renderBooksFromCategory(CategoryName = 'Art & Fashion') {
 
         return bookList
     };
+
 
     fetchData().then(result => result.forEach((elem) => {books.appendChild(elem)}));
 
