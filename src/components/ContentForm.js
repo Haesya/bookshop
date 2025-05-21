@@ -1,5 +1,6 @@
 import {renderCategoriesForm} from "./CategoriesForm.js";
 import {renderBooksFromCategory} from "./BooksFromCategory.js";
+import {renderLoadMore} from "./LoadMore.js";
 
 export function renderContentForm() {
     /*поле для контента с книгами и категориями*/
@@ -11,6 +12,8 @@ export function renderContentForm() {
 
     /*впихиваем в контент книги из первой категории*/
     content.appendChild(renderBooksFromCategory())
+
+    content.appendChild(renderLoadMore())
 
     return content;
 }

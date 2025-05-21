@@ -1,8 +1,7 @@
 
-
-export function LoadMore () {
+export function renderLoadMore () {
     const loadMore = document.createElement('button')
-    loadMore.classList.add('buy__book')
+    loadMore.classList.add('load__more')
     loadMore.innerText = "LOAD MORE"
 
     return loadMore;
