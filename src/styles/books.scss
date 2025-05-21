@@ -41,24 +41,27 @@
   width: 100%;
   height: 300px;
   grid-column: span 3;
-  border: 1px solid #4c3db2;
-  border-radius: 8px;
 }
 
 .book__cover {
   box-shadow: 0 21px 22px -14px rgba(34, 60, 80, 0.6);
-  width: 50%;
+  width: 100%;
   border: 1px solid #EFEEF6;
+  overflow: hidden;
 }
 
 .book__cover > img {
   width: 100%;
+  object-fit: cover;
 }
 
 .book__info {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 174px;
+  padding-top: 20px;
+  padding-left: 30px;
 }
 
 .book__author {
@@ -86,7 +89,7 @@
 }
 
 .book__description {
-  width: 50%;
+  width: 100%;
   font-size: 10px;
   color: #5c6a79;
 }
@@ -98,8 +101,9 @@
 
 .buy__book {
   border: 1px solid #4c3db2;
+  white-space: nowrap;
   color: #4c3db2;
-  padding: 17px 60px;
+  padding: 15px 55px;
   font-size: 10px;
   background-color: transparent;
   width: fit-content;
