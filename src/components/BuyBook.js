@@ -1,6 +1,6 @@
-export function buyBookClick(i, flag) {
+export function buyBookClick(flag, childrenBooks) {
     const findBook = document.querySelectorAll('.buy__book')
-    const buyBook = findBook[i]
+    const buyBook = findBook[childrenBooks]
     const purchases = document.querySelector('.purchases')
     let count = Number(purchases.innerHTML)
     if (flag === false) {

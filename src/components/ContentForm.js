@@ -3,7 +3,6 @@ import {renderBooksFromCategory} from "./BooksFromCategory.js";
 import {renderLoadMoreForm} from "./LoadMoreForm.js";
 
 export function renderContentForm() {
-
     /*поле для контента с книгами и категориями*/
     const content = document.createElement('div')
     content.classList.add('content')

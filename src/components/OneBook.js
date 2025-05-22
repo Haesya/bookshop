@@ -1,7 +1,8 @@
 import {buyBookClick} from "./BuyBook.js";
 
-export function renderOneBook(data, i) {
+export function renderOneBook(data, i, childrenBooks) {
     /*создали одну книгу*/
+    console.log(data)
     const book = document.createElement('div')
     book.classList.add('book')
 
@@ -62,11 +63,12 @@ export function renderOneBook(data, i) {
         bookInfo.appendChild(bookDescription)
     }
 
+
     /*цена книги*/
-    if (data.items[i].saleInfo.amount !== undefined) {
+    if (data.items[i].saleInfo.listPrice !== undefined) {
         const bookPrice = document.createElement('div')
         bookPrice.classList.add('book__price')
-        bookPrice.innerText = data.items[i].saleInfo.listPrice.amount
+        bookPrice.innerText = data.items[i].saleInfo.listPrice.amount + data.items[i].saleInfo.listPrice.currencyCode
         bookInfo.appendChild(bookPrice)
     }
 
@@ -76,7 +78,7 @@ export function renderOneBook(data, i) {
     buyBook.innerText = "BUY NOW"
     let flag = false
     buyBook.addEventListener("click", () => {
-        flag = buyBookClick(i, flag)
+        flag = buyBookClick(flag, childrenBooks)
     })
 
     /*и по порядку теперь остатки запихиваем в инфо*/
