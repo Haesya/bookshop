@@ -81,7 +81,17 @@
 }
 
 .book__rating__stars {
+  display: flex;
+}
 
+.stars {
+  width: 16px;
+  height: 16px;
+}
+
+.stars > img {
+  width: 16px;
+  height: 16px;
 }
 
 .book__rating__reviews {
@@ -113,7 +123,7 @@
 }
 
 .buy__book {
- @include button
+  @include button
 }
 
 .inTheBasket {

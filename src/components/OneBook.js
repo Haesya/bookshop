@@ -2,7 +2,6 @@ import {buyBookClick} from "./BuyBook.js";
 
 export function renderOneBook(data, i, childrenBooks) {
     /*создали одну книгу*/
-    console.log(data)
     const book = document.createElement('div')
     book.classList.add('book')
 
@@ -42,12 +41,24 @@ export function renderOneBook(data, i, childrenBooks) {
         /*звездочки*/
         const bookRatingStars = document.createElement('div')
         bookRatingStars.classList.add('book__rating__stars')
-        bookRatingStars.innerText = data.items[i].volumeInfo.ratingsCount
+        let Stars = Math.floor(data.items[i].volumeInfo.averageRating)
+        for(let i = 0; i < 5; i++) {
+            const stars = document.createElement('img')
+            stars.classList.add('stars')
+            if (i < Stars) {
+            stars.src = './starGold.svg'
+            stars.alt = 'star'
+            } else {
+                stars.src = './star.svg'
+            }
+            bookRatingStars.appendChild(stars)
+        }
+
 
         /*циферки*/
         const bookRatingReviews = document.createElement('div')
         bookRatingReviews.classList.add('book__rating__reviews')
-        bookRatingReviews.innerText = data.items[i].volumeInfo.averageRating
+        bookRatingReviews.innerText = data.items[i].volumeInfo.ratingsCount + ' views'
 
         bookInfo.appendChild(bookRating)
         bookRating.appendChild(bookRatingStars)
