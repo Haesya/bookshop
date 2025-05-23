@@ -1,8 +1,21 @@
-import { images } from '../data/picturesForSlider.js'
+import {images} from '../data/picturesForSlider.js'
 
 export function renderSliderForm() {
     const slider = document.createElement('div');
     slider.classList.add('slider')
+
+    slider.innerHTML = `
+      <div class='block__change'>
+        <p>CHANGE OLD BOOK ON NEW</p>
+        <img src="./arrow.svg" alt="arrow">
+      </div>
+      <div class="block__top100">
+        <p>TOP 100 BOOKS 2022</p>
+        <img src="./arrow.svg" alt="arrow">
+      </div>
+    `;
+
+
     const sliderPictures = document.createElement('div')
     sliderPictures.classList.add('slider__pictures')
     slider.appendChild(sliderPictures)
@@ -16,7 +29,7 @@ export function renderSliderForm() {
     balls.classList.add('balls')
     slider.appendChild(balls)
 
-    for (let i= 0; i < images.length; i++){
+    for (let i = 0; i < images.length; i++) {
         const ball = document.createElement('div')
         ball.classList.add('ball')
         ball.addEventListener('click', () => {
@@ -32,10 +45,10 @@ export function renderSliderForm() {
     }
 
     /*смена картинки*/
-    function changeDataAndBalls (current){
+    function changeDataAndBalls(current) {
         /*меняем картинку*/
         image.src = images[current]
-        for(let i = 0; i < balls.children.length; i++) {
+        for (let i = 0; i < balls.children.length; i++) {
             balls.children[i].classList.replace("main__ball__selected", "main__ball__notSelected")
         }
         /*кроме одного выбранного*/
