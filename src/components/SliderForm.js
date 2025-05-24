@@ -29,22 +29,10 @@ export function renderSliderForm() {
     balls.classList.add('balls')
     slider.appendChild(balls)
 
-    for (let i = 0; i < images.length; i++) {
-        const ball = document.createElement('div')
-        ball.classList.add('ball')
-        ball.addEventListener('click', () => {
-            changeDataAndBalls(i)
-        })
-        balls.appendChild(ball)
-        /*и всем шарикам кроме первого задаем свойство невыбранности*/
-        if (i > 0) {
-            ball.classList.add('main__ball__notSelected')
-        } else {
-            ball.classList.add('main__ball__selected')
-        }
-    }
+    let currentPicture = 1
 
-    /*смена картинки*/
+    let intervalID = setInterval(()=> changeDataAndBalls(currentPicture), 5000);
+
     function changeDataAndBalls(current) {
         /*меняем картинку*/
         image.src = images[current]
@@ -53,6 +41,29 @@ export function renderSliderForm() {
         }
         /*кроме одного выбранного*/
         balls.children[current].classList.replace("main__ball__notSelected", "main__ball__selected")
+
+        console.log('Картинка на экране', current)
+        if (current === 2) currentPicture = 0
+        else
+            currentPicture++
+        console.log('текущий счетчик', currentPicture)
+    }
+
+    for (let i = 0; i < images.length; i++) {
+        const ball = document.createElement('div')
+        ball.classList.add('ball')
+        ball.addEventListener('click', () => {
+            changeDataAndBalls(i)
+            clearInterval(intervalID)
+            intervalID = setInterval(()=> changeDataAndBalls(currentPicture), 5000);
+        })
+        balls.appendChild(ball)
+        /*и всем шарикам кроме первого задаем свойство невыбранности*/
+        if (i > 0) {
+            ball.classList.add('main__ball__notSelected')
+        } else {
+            ball.classList.add('main__ball__selected')
+        }
     }
 
     return slider;
