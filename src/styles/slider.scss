@@ -49,37 +49,19 @@
   box-sizing: border-box;
   color: #1c2a39;
   z-index: 500;
-  font-size: 18px;
   word-break: break-word;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
 }
 
 .block__change {
   @include block;
-  width: 150px;
-  height: 205px;
   background-color: #9e98dc;
-  top: 200px;
-  right: 250px;
 }
 
 .block__top100 {
   @include block;
-  width: 137px;
-  height: 273px;
   background-color: #ff8fe6;
-  top: 500px;
-  right: 190px;
 }
 
 .block__change > p, .block__top100 > p {
   font-family: Montserrat-bold, sans-serif;
-}
-
-.block__change > img, .block__top100 > img {
-  width: 60px;
-  height: 15px;
-  padding-bottom: 10px;
 }

@@ -1,5 +1,6 @@
 import './styles/_fonts.scss';
 import './styles/_general.scss';
+import './styles/_media.scss'
 import './styles/header.scss';
 import './styles/slider.scss';
 import './styles/books.scss';

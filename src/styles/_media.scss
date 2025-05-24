@@ -1,0 +1,140 @@
+@media screen and (min-width: 1px) {
+  .burger {
+    display: flex;
+  }
+  .icons, .navbar {
+    display: none;
+  }
+
+  @mixin block {
+    font-size: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .block__change {
+    @include block;
+    width: 60px;
+    height: 80px;
+    top: 130px;
+    right: 50px;
+  }
+  .block__top100 {
+    @include block;
+    width: 60px;
+    height: 100px;
+    top: 230px;
+    right: 10px;
+  }
+  .block__change > img, .block__top100 > img {
+    width: 20px;
+    height: 5px;
+  }
+  .content {
+    grid-area: books;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .categories {
+    width: 100%;
+  }
+  .books {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .icons, .navbar {
+    display: flex;
+  }
+  @mixin block {
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+  .block__change {
+    @include block;
+    width: 100px;
+    height: 170px;
+    top: 130px;
+    right: 50px;
+  }
+  .block__top100 {
+    @include block;
+    width: 90px;
+    height: 160px;
+    top: 370px;
+    right: 10px;
+  }
+  .block__change > img, .block__top100 > img {
+    width: 30px;
+    height: 8px;
+  }
+  .content {
+    grid-area: books;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+          "a a a b b b b b b b b b"
+  ". . . lm lm lm lm lm lm lm lm lm";
+  }
+  .categories {
+    grid-area: a;
+  }
+  .books {
+    grid-area: b;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .book {
+    grid-column: span 6;
+  }
+  .load__more {
+    grid-area: lm;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .book {
+    grid-column: span 3;
+  }
+  @mixin block {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .block__change {
+    @include block;
+    width: 150px;
+    height: 205px;
+    top: 195px;
+    right: 75px;
+  }
+  .block__top100 {
+    @include block;
+    width: 160px;
+    height: 230px;
+    top: 475px;
+    right: 10px;
+  }
+  .block__change > img, .block__top100 > img {
+    width: 55px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .block__change{
+    right: 260px;
+  }
+  .block__top100 {
+    right: 200px;
+  }
+}

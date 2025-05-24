@@ -21,6 +21,7 @@ export function renderHeaderForm() {
             <div class="purchases">0</div>
         </div>
     </div>
+    <div class="burger"><img src="/burger.svg" alt="burgerMenu"></div>
   `;
 
     header.appendChild(headerContent)
