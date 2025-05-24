@@ -12,7 +12,7 @@ $not__active__text: #5c6a79;
   grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);
   grid-auto-rows: auto auto auto;
   grid-template-areas:
-          ". header ."
+          "header header header"
           ". slider ."
           ". books .";
 }

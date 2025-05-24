@@ -11,9 +11,9 @@
 .categories {
   grid-area: a;
   display: flex;
+  position: absolute;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
 }
 
 .category {
@@ -42,13 +42,13 @@
   width: 100%;
   height: 300px;
   grid-column: span 3;
+  overflow: hidden;
 }
 
 .book__cover {
-  box-shadow: 0 21px 22px -14px rgba(34, 60, 80, 0.6);
   width: 100%;
-  overflow: hidden;
   align-self: center;
+  object-fit: cover;
 }
 
 .book__cover > img {
@@ -116,7 +116,7 @@
   color: #4c3db2;
   text-align: center;
   height: 45px;
-  width: 175px;
+  width: 173px;
   font-size: 10px;
   background-color: transparent;
   cursor: pointer;

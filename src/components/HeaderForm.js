@@ -1,7 +1,9 @@
 export function renderHeaderForm() {
     const header = document.createElement('header');
+    const headerContent = document.createElement('div')
+    headerContent.classList.add('header__content')
 
-    header.innerHTML = `
+    headerContent.innerHTML = `
     <div class="title">Bookshop</div>
     <div class="navbar">
         <ul>
@@ -20,6 +22,8 @@ export function renderHeaderForm() {
         </div>
     </div>
   `;
+
+    header.appendChild(headerContent)
 
     return header;
 }

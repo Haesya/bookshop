@@ -16,3 +16,4 @@ app.appendChild(renderSliderForm())
 
 /*ниже слайдера делаем поле дня категорий и книг каждой категории*/
 app.appendChild(renderContentForm())
+
