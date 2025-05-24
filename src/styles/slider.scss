@@ -1,3 +1,5 @@
+@import "general";
+
 .slider {
   grid-area: slider;
   border-radius: 8px;
@@ -11,11 +13,8 @@
 }
 
 .insideSlider {
-  color: #FFFFFF;
   height: 20px;
   width: fit-content;
-  font-family: Nunito, sans-serif;
-  font-size: 13px;
 }
 
 .balls {
@@ -47,7 +46,7 @@
   justify-content: end;
   position: absolute;
   box-sizing: border-box;
-  color: #1c2a39;
+  color: $selectColor;
   z-index: 500;
   word-break: break-word;
 }
