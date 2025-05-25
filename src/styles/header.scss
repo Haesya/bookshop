@@ -46,14 +46,13 @@ header {
   font-family: Montserrat-bold, sans-serif;
   font-size: 10px;
   list-style: none;
-  color: $not__active__text;
+  color: $justText;
   align-items: center;
 }
 
-.active {
-  color: $active__text;
+.navbar > ul > li:first-child{
+  color: $selectColor;
 }
-
 
 .inside__basket {
   position: relative;
